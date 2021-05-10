@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+
+    <title>Vue-3</title>
+
+    <!-- Adding Vue to my html -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
+
+    <!-- Adding Font awesome with cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  
+  </head>
+  
+  <body>
+
+    <!-- It is the centered box -->
+
+    <div id="body" :class="[theme]">
+      <p>
+
+        <!-- Some Dummy texts -->
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi alias
+        pariatur maiores delectus? Dolor consequatur autem beatae aut enim animi
+        doloremque quos neque error sint repudiandae fuga nam tempore,
+        molestiae, perspiciatis adipisci. Voluptatibus, maxime obcaecati.
+        Deleniti, magni nobis hic exercitationem dolorum fuga iusto dolorem
+        necessitatibus aliquid soluta laudantium nemo ullam!
+
+
+
+      </p>
+
+      <!-- Button for changing the theme. It is mainly the moon or sun -->
+
+      <button @click="theme_changer()" class="theme_changer"><i :class="btn"></i></button>
+    
+    
+    </div>
+
+    <!-- Adding Javascript to my html -->
+
+    <script src="script.js" defer></script>
+
+
+  </body>
+</html>
+<style>
+
+  /*This will remove extra spaces from parent element*/
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /*Centering The Box*/
+
+  body{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+
+  /* 
+  #body, light and dark these three are equal. Light changes the background color to a 
+  light color and dark changes it to a darken color. That's it
+  */
+
+  #body{
+    height: 40vh;
+    width: 50vw;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgb(124, 124, 124);
+    transition: all 0.3s ease-in-out;
+  }
+  .light {
+    background-color: aliceblue;
+    color: black;
+  }
+  .dark {
+    background-color: gray;
+    color: aliceblue;
+  }
+
+  /*Theme Changer Button Styling*/
+
+  .theme_changer{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-image: linear-gradient(to top right,#00ff9c,#b7ffe3);
+    position: relative;
+    top: 7vh;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+</style>
